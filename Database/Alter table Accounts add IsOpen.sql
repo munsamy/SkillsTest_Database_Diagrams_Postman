@@ -1,0 +1,1 @@
+Alter table dbo.Accounts add IsOpen bit
