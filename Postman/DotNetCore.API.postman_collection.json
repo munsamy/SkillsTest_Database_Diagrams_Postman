@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "1d9082d3-8af1-40e7-9de5-ee43e25c6a56",
+		"name": "DotNetCore.API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6640837",
+		"_collection_link": "https://cds-diet-plan.postman.co/workspace/MVNO~43553a9f-623e-4673-aa25-32c2bcca8ce8/collection/6640837-1d9082d3-8af1-40e7-9de5-ee43e25c6a56?action=share&source=collection_link&creator=6640837"
+	},
+	"item": [
+		{
+			"name": "All Persons",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/persons",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - by code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/persons?code=1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"persons"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - by id_number",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/persons?id_number=60XX0707320XX",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"persons"
+					],
+					"query": [
+						{
+							"key": "id_number",
+							"value": "60XX0707320XX"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts - by person_code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/accounts?person_code=1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "person_code",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions - by account_code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/transactions?account_code=5",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "account_code",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"account_code\": 2,\r\n  \"transaction_date\": \"2025-11-12\",\r\n  \"capture_date\":\"2025-11-15 kj\",\r\n  \"amount\":200,\r\n  \"description\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/Transactions",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"account_code\": 2,\r\n  \"transaction_date\": \"2025-11-12\",\r\n  \"capture_date\":\"2025-11-15\",\r\n  \"amount\":0,\r\n  \"description\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/Transactions",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons - Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test\",\r\n    \"surname\": \"Test\",\r\n    \"id_number\": \"123456780009\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/persons",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"persons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Persons",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/persons?code=1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"persons"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/Accounts?code=1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Accounts"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/api/transactions?code=6&account_code=6",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"transactions"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "6"
+						},
+						{
+							"key": "account_code",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Person",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"test\",\r\n    \"surname\":\"test\",\r\n    \"id_number\": 1234\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/Persons?code=6",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Persons"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts - Update isOpen",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"IsOpen\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/Accounts?code=1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Accounts"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Accounts - Update account number",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"IsOpen\":0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/Accounts?code=1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Accounts"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"transaction_date\": \"2025-11-12\",\r\n  \"amount\":0,\r\n  \"description\":\"test\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/api/Transactions?code=10",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"api",
+						"Transactions"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
